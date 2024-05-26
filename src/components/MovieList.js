@@ -1,4 +1,4 @@
-// src/components/MovieList.js
+
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMovies } from '../slices/moviesSlice';
