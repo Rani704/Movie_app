@@ -1,4 +1,4 @@
-// src/pages/FavoriteMoviesPage.js
+
 import React from 'react';
 import FavoriteMovies from '../components/FavoriteMovies';
 
