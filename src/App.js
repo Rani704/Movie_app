@@ -18,8 +18,8 @@ const App = () => {
             </ul>
           </nav>
           <Routes>
-            <Route exact path="/" component={MovieListPage} />
-            <Route path="/favorites" component={FavoriteMoviesPage} />
+            <Route exact path="/" element={MovieListPage} />
+            <Route path="/favorites" element={FavoriteMoviesPage} />
           </Routes>
         </div>
       </Router>
