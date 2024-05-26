@@ -1,4 +1,4 @@
-// src/components/FavoriteMovies.js
+
 import React from 'react';
 import { useSelector } from 'react-redux';
 import MovieItem from './MovieItem';
