@@ -1,4 +1,4 @@
-// src/components/MovieItem.js
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -23,11 +23,9 @@ const MovieItem = ({ movie }) => {
 
   return (
     <div className="movie-item" onClick={() => history.push(movie.imdb_url)}>
-      <img src={movie.poster} alt={movie.title} />
-      <h3>{movie.title}</h3>
-      <p>{movie.genre}</p>
-      <p>{movie.year}</p>
-      <p>{movie.director}</p>
+      <img src={movie.image.image} alt={movie.title} />
+      <h3>{movie.movie}</h3>
+      <p>{movie.imdb_url}</p>
       <p>{movie.rating}</p>
       <button onClick={(e) => { e.stopPropagation(); toggleFavorite(); }}>
         <FontAwesomeIcon icon={isFavorite ? solidStar : regularStar} />
