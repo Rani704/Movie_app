@@ -5,13 +5,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite, removeFavorite } from '../slices/favoritesSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as solidStar, faStar as regularStar } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
+import createBrowserHistory from "history/createBrowserHistory"
 
 const MovieItem = ({ movie }) => {
   const dispatch = useDispatch();
   const favorites = useSelector(state => state.favorites);
   const isFavorite = favorites.some(fav => fav.id === movie.id);
-  const history = useNavigate();
+   export const history = createBrowserHistory({
+     forceRefresh:true
+   })
 
   const toggleFavorite = () => {
     if (isFavorite) {
